@@ -1,0 +1,6 @@
+package jp.cyber_wars.domain.dto.room;
+
+import jp.cyber_wars.domain.pojo.TimeLimit;
+
+public record FetchInformationResponse(
+    String opponentName, boolean host, TimeLimit timeLimit, boolean started) {}
