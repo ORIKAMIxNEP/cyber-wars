@@ -1,0 +1,27 @@
+name: Main CD
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  main-cd:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: CD
+        uses: ./.github/actions/cd
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          proxy_host: ${{ secrets.PROXY_HOST }}
+          proxy_password: ${{ secrets.PROXY_PASSWORD }}
+          branch_name: main

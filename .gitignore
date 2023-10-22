@@ -1,0 +1,9 @@
+# Gradle
+.gradle/
+build/
+
+# Ubuntu
+nohup.out
+
+# IntelliJ IDEA
+.idea/

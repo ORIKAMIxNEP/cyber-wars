@@ -1,0 +1,26 @@
+name: CI
+description: CI
+
+runs:
+  using: composite
+  steps:
+    - name: Setup JDK
+      uses: actions/setup-java@main
+      with:
+        distribution: 'microsoft'
+        java-version: 17
+
+    - name: Setup Gradle
+      uses: gradle/gradle-build-action@main
+
+    - name: Checkstyle
+      run: ./gradlew checkstyleMain
+      shell: bash
+
+    - name: Spotless
+      run: ./gradlew spotlessCheck
+      shell: bash
+
+    - name: Build
+      run: ./gradlew clean build
+      shell: bash
