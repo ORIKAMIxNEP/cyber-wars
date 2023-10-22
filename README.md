@@ -1,4 +1,4 @@
-# procon34-cyber-wars-backend
+# cyber-wars
 
 ## 実行方法
 必要であれば「Server Port」に起動するポート番号を入れる（デフォルト値は `8080` ）<br>
