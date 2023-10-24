@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Primary;
 
 @Configuration
 @MapperScan(
-    basePackages = "jp.ac.anan.procon.cyber_wars.infrastructure.mapper.cyber_wars",
+    basePackages = "jp.cyber_wars.infrastructure.mapper.cyber_wars",
     sqlSessionTemplateRef = "cyberWarsSqlSessionTemplate")
 public class CyberWarsDataSourceConfig {
   @Bean

@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @MapperScan(
-    basePackages = "jp.ac.anan.procon.cyber_wars.infrastructure.mapper.challenge",
+    basePackages = "jp.cyber_wars.infrastructure.mapper.challenge",
     sqlSessionTemplateRef = "challengeSqlSessionTemplate")
 public class ChallengeDataSourceConfig {
   @Bean
