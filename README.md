@@ -9,7 +9,7 @@
 gradle clean build
 ```
 ```console
-./gradlew bootRun -Pargs="--server.port=「Server Port」 --csrf.token=「CSRF Token」 --spring.datasource.cyber-wars.password=「CYBER WARS Database Dassword」 --spring.datasource.challenge.password=「Challenge Database Password」"
+./gradlew bootRun -Pargs="--server.port=「Server Port」 --csrf.token=「CSRF Token」 --spring.datasource.cyber-wars.password=「CYBER WARS Database Password」 --spring.datasource.challenge.password=「Challenge Database Password」"
 ```
 
 ## 開発環境
